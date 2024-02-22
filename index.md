@@ -1,1 +1,1 @@
-Learning notes from my work 
+Everything about LLM, GPU, K8s. 
