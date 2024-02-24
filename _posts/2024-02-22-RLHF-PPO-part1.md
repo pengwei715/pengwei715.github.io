@@ -36,7 +36,7 @@ Off-policy learning: "look over someone's shoulder" RLHF ??
 
 Greedy in the limit with infinite exploration(GLIE)
 
-GLIE Monte-Carlo Control
+GLIE Monte-Carlo Control 
 
 All state-action pairs are explored infinitely many times.
 
