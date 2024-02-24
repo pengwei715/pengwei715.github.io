@@ -5,7 +5,7 @@ description: learning how to use PPO to do RLHF with phi2 model
 tags: LLM, PPO, RLHF
 ---
 
-This blog record my learning process of how to use RLHF to do the alignment with phi-2 model on Iguazio platform
+This blog record my learning process of how to use RLHF to do the alignment with phi-2 model on Iguazio platform.
 
 ### Learning
 
@@ -33,6 +33,16 @@ This blog record my learning process of how to use RLHF to do the alignment with
 On-policy learning: "learn on the job"
 
 Off-policy learning: "look over someone's shoulder" RLHF ??
+
+Greedy in the limit with infinite exploration(GLIE)
+
+GLIE Monte-Carlo Control
+
+All state-action pairs are explored infinitely many times.
+
+
+model-free means know nothing or little thing about MDP
+
 
 #### Policy Gradient Algorithms
 
