@@ -40,9 +40,24 @@ GLIE Monte-Carlo Control
 
 All state-action pairs are explored infinitely many times.
 
-
 model-free means know nothing or little thing about MDP
 
+Value-Based and Policy-Based RL:
+
+value-based is using the learnt value function. (implicit poli cy, greedy etc)
+polciY based no value function learnt policy. better convergence properties. can learn stochastic policies
 
 #### Policy Gradient Algorithms
+
+- the policy objective functions
+1. start value if we know the distribution of the start state to know the reward
+2. average value
+3. average reward per time-step
+
+
+Before the actor-critic, estimated Q value has big variance. 
+-Actor-critic
+1. critic: update the value function(action value or state value)
+2. Actor: update the policy params in the direction suggered by the critic. 
+
 
