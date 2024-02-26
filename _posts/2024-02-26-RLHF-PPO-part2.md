@@ -5,6 +5,8 @@ description: learning how to use PPO to do RLHF with phi2 model
 tags: LLM, PPO, RLHF
 ---
 
+This blog is the second part of the RLHF-PPO
+
 ### TRPO
 
 - Trust region policy optimization enforces KL divergence constraint on the policy update
