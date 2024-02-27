@@ -42,21 +42,21 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 1. Critic: this is the value function
 2. Actor: this is the policy function
 
-- Alg:
+- Alg (this is the implementation of the huggingface's trl lib)
 
 $$
-\begin{align}
-1. **Input:** initial policy parameters θ₀, initial value function parameters ϕ₀.
-2. **for** n = 0, 1, 2, ... **do**
-   1. Collect a set of trajectories Dₙ = {τᵢ} by executing policy π(θₙ) within the environment.
-   2. Compute rewards-to-go \( \hat{R}_t \).
-   3. Compute advantage estimates, \( \hat{A}_t \) (using any advantage estimation method) based on the current value function \( V_{ϕₙ} \).
-   4. Update the policy by maximizing the PPO-penalty/clip/ptx objective:
-      \( θ_{n+1} = \arg\max_θ L_{\text{ppo-clip}}(θₙ) \).
-   5. Update the value function by regression on mean-squared error:
-      \( ϕ_{n+1} = \arg\min_ϕ L_{\text{critic}}(ϕₙ) \).
-3. **end for**
-\end{align}
+\begin{align*}
+1. & \text{ \textbf{Input:}} \text{ initial policy parameters } \theta_0, \text{ initial value function parameters } \phi_0. \\
+2. & \text{ \textbf{for} } n = 0, 1, 2, \ldots \text{ \textbf{do}} \\
+& \quad a. \text{ Collect a set of trajectories } D_n = \{\tau_i\} \text{ by executing policy } \pi(\theta_n) \text{ within the environment.} \\
+& \quad b. \text{ Compute rewards-to-go } \hat{R}_t. \\
+& \quad c. \text{ Compute advantage estimates, } \hat{A}_t \text{ (using any advantage estimation method) based on the current value function } V_{\phi_n}. \\
+& \quad d. \text{ Update the policy by maximizing the PPO-penalty/clip objective:} \\
+& \qquad \theta_{n+1} = \arg \max_\theta L_{\text{ppo-clip}}(\theta_n). \\
+& \quad e. \text{ Update the value function by regression on mean-squared error:} \\
+& \qquad \phi_{n+1} = \arg \min_\phi L_{\text{critic}}(\phi_n). \\
+3. & \text{ \textbf{end for}}
+\end{align*}
 $$
 
 
