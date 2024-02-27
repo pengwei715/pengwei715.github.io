@@ -40,3 +40,7 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 
 
 
+
+### Pain point
+
+- The PPO need a ref model, reward model, orignal model to work together for the alignment training. we only have 5 T4 GPUs to use. it will be super chanllege. 
