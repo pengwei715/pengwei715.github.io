@@ -44,7 +44,7 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 
 - Alg (this is the implementation of the huggingface's trl lib)
 <div align="center" width="100%">
-<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="RLHF" src="_posts/img/2024-02-26-RLHF-PPO-part2-img1.jpg)">
+<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="RLHF" src="assets/img/2024-02-26-RLHF-PPO-part2-img1.jpg">
 </div>
 
 ### Pain point
