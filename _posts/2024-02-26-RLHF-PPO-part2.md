@@ -44,20 +44,8 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 
 - Alg (this is the implementation of the huggingface's trl lib)
 
-$$
-\begin{align*}
-1. & \text{ \textbf{Input:}} \text{ initial policy parameters } \theta_0, \text{ initial value function parameters } \phi_0. \\
-2. & \text{ \textbf{for} } n = 0, 1, 2, \ldots \text{ \textbf{do}} \\
-& \quad a. \text{ Collect a set of trajectories } D_n = \{\tau_i\} \text{ by executing policy } \pi(\theta_n) \text{ within the environment.} \\
-& \quad b. \text{ Compute rewards-to-go } \hat{R}_t. \\
-& \quad c. \text{ Compute advantage estimates, } \hat{A}_t \text{ (using any advantage estimation method) based on the current value function } V_{\phi_n}. \\
-& \quad d. \text{ Update the policy by maximizing the PPO-penalty/clip objective:} \\
-& \qquad \theta_{n+1} = \arg \max_\theta L_{\text{ppo-clip}}(\theta_n). \\
-& \quad e. \text{ Update the value function by regression on mean-squared error:} \\
-& \qquad \phi_{n+1} = \arg \min_\phi L_{\text{critic}}(\phi_n). \\
-3. & \text{ \textbf{end for}}
-\end{align*}
-$$
+[](img/2024-02-26-RLHF-PPO-part2-img1.jpg)
+
 
 
 
