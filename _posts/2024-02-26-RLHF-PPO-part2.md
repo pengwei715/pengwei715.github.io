@@ -44,9 +44,15 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 
 - Alg (this is the implementation of the huggingface's trl lib)
 <div align="center" width="100%">
-<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="RLHF" src="./img/2024-02-26-RLHF-PPO-part2-img1.jpg)">
+<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="RLHF" src="img/2024-02-26-RLHF-PPO-part2-img1.jpg)">
 </div>
 
 ### Pain point
 
-- The PPO need a ref model, reward model, orignal model to work together for the alignment training. we only have 5 T4 GPUs to use. it will be super chanllege. 
+- There are 4 models interact with each other during the pipeline training.
+1. the ref policy model = orignal llm
+2. the target policy model = target llm (which params will change during the PPO) 
+3. the value function = this is used in the Advantage function
+4. the reward model = this is used in the Advantage function.  (this one is likely to be another llm)
+
+- We only have 4 T4 GPUs to use. it will be super chanllege. 
