@@ -43,11 +43,9 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 2. Actor: this is the policy function
 
 - Alg (this is the implementation of the huggingface's trl lib)
-
-[](img/2024-02-26-RLHF-PPO-part2-img1.jpg)
-
-
-
+<div align="center" width="100%">
+<img style="width: 80%; min-width: 500px; display: block; margin: auto; margin-bottom: 20px" alt="RLHF" src="./img/img/2024-02-26-RLHF-PPO-part2-img1.jpg)">
+</div>
 
 
 ### Pain point
