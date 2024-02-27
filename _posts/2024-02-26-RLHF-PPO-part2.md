@@ -38,6 +38,22 @@ optimize the policy of the agent (mapping fo states to actions). Not learning th
 - Generalized Advantage Estimation
 instead of only 1 step look ahead as temporal difference. we use k-steps TD. So there will be some trade-off between bias and variance. if k is small, high bias, low variance. if k is large, low bias, high variance. To banlance that. GAE defineds a exponential moving average with weights.
 
+- Need two models to train during the PPO training:
+1. Critic: this is the value function
+2. Actor: this is the policy function
+
+- Alg:
+1. **Input:** initial policy parameters θ₀, initial value function parameters ϕ₀.
+2. **for** n = 0, 1, 2, ... **do**
+   1. Collect a set of trajectories Dₙ = {τᵢ} by executing policy π(θₙ) within the environment.
+   2. Compute rewards-to-go \( \hat{R}_t \).
+   3. Compute advantage estimates, \( \hat{A}_t \) (using any advantage estimation method) based on the current value function \( V_{ϕₙ} \).
+   4. Update the policy by maximizing the PPO-penalty/clip/ptx objective:
+      \( θ_{n+1} = \arg\max_θ L_{\text{ppo-clip}}(θₙ) \).
+   5. Update the value function by regression on mean-squared error:
+      \( ϕ_{n+1} = \arg\min_ϕ L_{\text{critic}}(ϕₙ) \).
+3. **end for**
+
 
 
 
