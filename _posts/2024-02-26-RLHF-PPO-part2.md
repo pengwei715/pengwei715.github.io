@@ -29,6 +29,14 @@ This blog is the second part of the RLHF-PPO
 ### Steps:
 
 - The reward model can be a transformer-based languge model with the last unembedding layer removed and add an additional linear layer to the final transfomer layer.
-- 
+- State in the RL: 
+
+at time t, the state is all the conversation text up to this point, both by the model and the human. Based on its policy, the agent's action a is to generate the next token. The reward is a value with respect of state and action. this is calculated froma reward function. 
+- Policy Gradient Methods. 
+
+optimize the policy of the agent (mapping fo states to actions). Not learning the value function. Improve the policy using the gradient ascent algorithm. The native policy Gradient Method is using monte carlo sampling with actual return. it has bigger variance issue. So a common strategy is to use advantage function estimates return. It shows how much better it's to tkae a specific action a at state s, compared to the average quality of actions at that state under the same policy. it's just the action-value - state-value
+- Generalized Advantage Estimation
+instead of only 1 step look ahead as temporal difference. we use k-steps TD. So there will be some trade-off between bias and variance. if k is small, high bias, low variance. if k is large, low bias, high variance. To banlance that. GAE defineds a exponential moving average with weights.
+
 
 
