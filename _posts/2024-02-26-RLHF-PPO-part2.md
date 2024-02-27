@@ -26,4 +26,9 @@ This blog is the second part of the RLHF-PPO
 - Find some bench mark dataset to make the comparison before and after RLHF
 - Genaralize the function into the mlrun function hub
 
+### Steps:
+
+- The reward model can be a transformer-based languge model with the last unembedding layer removed and add an additional linear layer to the final transfomer layer.
+- 
+
 
