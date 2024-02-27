@@ -43,6 +43,8 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
 2. Actor: this is the policy function
 
 - Alg:
+$$
+\begin{align}
 1. **Input:** initial policy parameters θ₀, initial value function parameters ϕ₀.
 2. **for** n = 0, 1, 2, ... **do**
    1. Collect a set of trajectories Dₙ = {τᵢ} by executing policy π(θₙ) within the environment.
@@ -53,6 +55,8 @@ instead of only 1 step look ahead as temporal difference. we use k-steps TD. So 
    5. Update the value function by regression on mean-squared error:
       \( ϕ_{n+1} = \arg\min_ϕ L_{\text{critic}}(ϕₙ) \).
 3. **end for**
+\end{align}
+$$
 
 
 
