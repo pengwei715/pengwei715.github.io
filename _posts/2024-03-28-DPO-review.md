@@ -1,6 +1,6 @@
 ---
 layout: post
-title: DPO
+title: A short peek to the jouney of DPO
 description: A short peek to the jouney of DPO
 tags: LLM, DPO
 ---
